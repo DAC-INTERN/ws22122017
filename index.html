@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.18.0/math.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <p id="math-string">{{ mathString }}</p>
+    <p id="result">{{ result }}</p>
+
+    <table>
+        <tr>
+            <td v-on:click="insertValue(7)">7</td>
+            <td v-on:click="insertValue(8)">8</td>
+            <td v-on:click="insertValue(9)">9</td>
+            <td v-on:click="deleteMathString()">DEL</td>
+        </tr>
+        <tr>
+            <td v-on:click="insertValue(4)">4</td>
+            <td v-on:click="insertValue(5)">5</td>
+            <td v-on:click="insertValue(6)">6</td>
+            <td v-on:click="clearMathString()">CLR</td>
+        </tr>
+        <tr>
+            <td v-on:click="insertValue(1)">1</td>
+            <td v-on:click="insertValue(2)">2</td>
+            <td v-on:click="insertValue(3)">3</td>
+            <td v-on:click="insertValue('-')">-</td>
+        </tr>
+        <tr>
+            <td v-on:click="insertValue('.')">.</td>
+            <td v-on:click="insertValue(0)">0</td>
+            <td v-on:click="calculateResult">=</td>
+            <td v-on:click="insertValue('+')">+</td>
+        </tr>
+    </table>
+
+</div>
+
+<script src="js/custom.js"></script>
+
+</body>
+</html>
