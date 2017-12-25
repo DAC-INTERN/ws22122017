@@ -23,15 +23,13 @@ var app = new Vue({
 
         validateMathString: function (mathString) {
             // remove invalid ..
-            //@Todo: this function is not completed
-            while(mathString.search('..')!== -1){
-                // console.log("ok");
+            //@Todo:  completed but in addition , with this value : 2....52.....3+100002 , 
+            //the result will not return
+            while(mathString.indexOf('..')!== -1){
                 mathString = mathString.replace('..', '.');
                 console.log(mathString);
-
             }
             return mathString;
-
         }
     }
 });
