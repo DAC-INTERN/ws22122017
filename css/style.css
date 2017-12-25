@@ -1,31 +1,226 @@
-#app{
-    max-width: 200px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    margin-top: 50px;
+body {
+    background: #f0f0f0;
 }
 
-table{
-    border: 1px solid #000;
+#app {
+    width: 300px;
+    height: 400px;
+    background: #c9c999;
+    margin: 50px auto;
+    -webkit-animation: bgChange 3s 3s alternate infinite;
+    transition: all 3s ease;
 }
 
-tr,td{
-    border: 1px solid #000;
+button {
+    border: 0;
+    color: #fff;
 }
 
-td{
+#form-showNum {
+    display: block;
+    font-family: sans-serif;
+    width: 227px;
+    height: 80px;
+    margin: 10px auto;
+    text-align: left;
+    border: 0;
+    background: #3b3535;
+    color: #fff;
+    padding-top: 10px;
+    font-size: 20px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+    top: 10px;
+    margin-left: 35px;
+    margin-right: 10px;
+}
+
+#result:hover {
+
+    cursor: text;
+
+}
+
+#first-rows {
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rows {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#delete {
+    width: 110px;
+    height: 50px;
+    margin-left: 25px;
+    border-radius: 4px;
+}
+
+/* Aligning the division and dot button properly */
+.fall-back {
+    margin-left: 3px !important;
+}
+
+/* Aligning the addition and equals to button properly */
+.align {
+    margin-left: 6px !important;
+}
+
+/* Button styling */
+.btn-style {
     width: 50px;
     height: 50px;
-    text-align: center;
+    margin-left: 5px;
+    border-radius: 4px;
 }
 
-#math-string{
-    padding: 5px;
+.eqn {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.first-child {
+    margin-left: 25px;
+}
+
+/* Adding background color to the number values */
+.num-bg {
+    background: #000;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 3px solid #333;
+}
+
+.num-bg:active {
+    background: #000;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 5px 5px 5px #555;
+}
+
+/*Adding background color to the operator values */
+.opera-bg {
+    background: #333;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 3px solid #555;
+}
+
+.opera-bg:active {
+    background: #333;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 4px 4px 4px #555;
+}
+
+/*Adding a background color to the delete button */
+.del-bg {
+    background: #7705fb;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 3px solid #9641eb;
+}
+
+.del-bg:active {
+    background: #7705fb;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 4px 4px 4px #9641eb;
+}
+
+/*Adding a background color to the equals to button */
+#eqn-bg {
+    background: #c85f00;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 3px solid #f2752a;
+}
+
+#eqn-bg:active {
+    background: #c85f00;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 4px 4px 4px #f2752a;
+}
+
+@-webkit-keyframes bgChange {
+    100% {
+        background: #d5decc;
+    }
+
+    100% {
+        background: #577aa9;
+    }
+
+    100% {
+        background: #5ab99e;
+    }
+}
+
+/*My style*/
+
+/*Button zero*/
+.zero {
+    width: 110px;
+    height: 50px;
+    margin-left: 25px;
+    border-radius: 4px;
+}
+
+/*Style for Screen include Math String and Result*/
+
+#form-showNum #math-string {
     font-size: 20px;
+    margin-top: 0;
+    margin-left: 5px;
 }
 
-#result{
+#form-showNum #result {
     padding: 5px;
     font-size: 16px;
     text-align: right;
+    margin-bottom: 5px;
+}
+
+/*Change color for clear button*/
+
+#clear-btn {
+    background: #0963f2;
+    border-bottom: 3px solid #3c8ae8;
+}
+
+#clear-btn:active {
+    background: #0963f2;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 4px 4px 4px #3c8ae8;
 }
