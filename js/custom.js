@@ -10,15 +10,16 @@ var app = new Vue({
         },
 
         calculateResult: function () {
-            this.result = math.eval(this.validateMathString(this.mathString));
+            this.result = math.eval(this.validateMathString(this.mathString.toString()));
         },
 
         deleteMathString: function () {
-            this.mathString = this.mathString.slice(0,-1);
+            this.mathString = this.mathString.slice(0, -1);
         },
 
-        clearMathString: function () {
+        clearScreen: function () {
             this.mathString = '';
+            this.result = '';
         },
 
         validateMathString: function (mathString) {
@@ -32,4 +33,5 @@ var app = new Vue({
             return mathString;
         }
     }
+
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
@@ -11,42 +11,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.18.0/math.min.js"></script>
 </head>
 <body>
+<div id="app"><!-- Main background -->
 
-<div id="app">
+    <div id="form-showNum">
+        <p id="math-string">{{ mathString }}</p>
 
-    <p id="math-string">{{ mathString }}</p>
-    <p id="result">{{ result }}</p>
+        <p id="result">{{ result }}</p>
+    </div>
+    <div id="main">
+        <div id="first-rows">
+            <button v-on:click="deleteMathString()" class="del-bg" id="delete">Del</button>
+            <button v-on:click="clearScreen()" class="btn-style operator opera-bg fall-back" id="clear-btn">AC</button>
+            <button v-on:click="insertValue('+')" class="btn-style opera-bg value align operator">+</button>
+        </div>
 
-    <table>
-        <tr>
-            <td v-on:click="insertValue(7)">7</td>
-            <td v-on:click="insertValue(8)">8</td>
-            <td v-on:click="insertValue(9)">9</td>
-            <td v-on:click="deleteMathString()">DEL</td>
-        </tr>
-        <tr>
-            <td v-on:click="insertValue(4)">4</td>
-            <td v-on:click="insertValue(5)">5</td>
-            <td v-on:click="insertValue(6)">6</td>
-            <td v-on:click="clearMathString()">CLR</td>
-        </tr>
-        <tr>
-            <td v-on:click="insertValue(1)">1</td>
-            <td v-on:click="insertValue(2)">2</td>
-            <td v-on:click="insertValue(3)">3</td>
-            <td v-on:click="insertValue('-')">-</td>
-        </tr>
-        <tr>
-            <td v-on:click="insertValue('.')">.</td>
-            <td v-on:click="insertValue(0)">0</td>
-            <td v-on:click="calculateResult">=</td>
-            <td v-on:click="insertValue('+')">+</td>
-        </tr>
-    </table>
+        <div class="rows">
+            <button v-on:click="insertValue(7)" class="btn-style num-bg num first-child">7</button>
+            <button v-on:click="insertValue(8)" class="btn-style num-bg num">8</button>
+            <button v-on:click="insertValue(9)" class="btn-style num-bg num">9</button>
+            <button v-on:click="insertValue('-')" class="btn-style opera-bg operator">-</button>
+        </div>
+
+        <div class="rows">
+            <button v-on:click="insertValue(4)" class="btn-style num-bg num first-child">4</button>
+            <button v-on:click="insertValue(5)" class="btn-style num-bg num">5</button>
+            <button v-on:click="insertValue(6)" class="btn-style num-bg num">6</button>
+            <button v-on:click="insertValue('*')" class="btn-style opera-bg operator">x</button>
+        </div>
+
+        <div class="rows">
+            <button v-on:click="insertValue(1)" class="btn-style num-bg num first-child">1</button>
+            <button v-on:click="insertValue(2)" class="btn-style num-bg num">2</button>
+            <button v-on:click="insertValue(3)" class="btn-style num-bg num">3</button>
+            <button v-on:click="insertValue('/')" class="btn-style opera-bg operator">/</button>
+        </div>
+
+        <div class="rows">
+            <button v-on:click="insertValue(0)" class="num-bg zero">0</button>
+            <button v-on:click="insertValue('.')" class="btn-style num-bg period fall-back">.</button>
+            <button v-on:click="calculateResult" id="eqn-bg" class="eqn align">=</button>
+        </div>
+
+    </div>
 
 </div>
 
 <script src="js/custom.js"></script>
-
+</div>
 </body>
 </html>
