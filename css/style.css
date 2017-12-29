@@ -1,16 +1,28 @@
 #app{
-    max-width: 200px;
+    max-width: 350px;
     margin: 0 auto;
     border: 1px solid #ccc;
-    margin-top: 50px;
+    margin-top: 150px;
+    height: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19),0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  ,0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid lightblue;
+    border-radius: 12px;
+    background-color: #FFFAFA;
 }
 
 table{
     border: 1px solid #000;
+    background-color: #F0F8FF;
+    width: 346.3px;
+    height: 430px;
+    border: 2px solid none;
+    border-radius: 12px;
+    margin-top: 20%;
 }
 
 tr,td{
-    border: 1px solid #000;
+    border: 1px solid white;
 }
 
 td{
@@ -25,7 +37,8 @@ td{
 }
 
 #result{
-    padding: 5px;
+    /*padding: 5px;*/
+    margin-top: 25px;
     font-size: 16px;
     text-align: right;
 }

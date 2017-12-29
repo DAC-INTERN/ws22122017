@@ -19,16 +19,22 @@
 
     <table>
         <tr>
+            <td v-on:click="deleteMathString()">DEL</td>
+            <td v-on:click="clearMathString()">CLR</td>
+            <td v-on:click="negate">+-</td>
+            <td v-on:click="insertValue(c)"></td>
+        </tr>
+        <tr>
             <td v-on:click="insertValue(7)">7</td>
             <td v-on:click="insertValue(8)">8</td>
             <td v-on:click="insertValue(9)">9</td>
-            <td v-on:click="deleteMathString()">DEL</td>
+            <td v-on:click="insertValue('*')">*</td>
         </tr>
         <tr>
             <td v-on:click="insertValue(4)">4</td>
             <td v-on:click="insertValue(5)">5</td>
             <td v-on:click="insertValue(6)">6</td>
-            <td v-on:click="clearMathString()">CLR</td>
+            <td v-on:click="insertValue('/')">/</td>
         </tr>
         <tr>
             <td v-on:click="insertValue(1)">1</td>
